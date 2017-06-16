@@ -8,18 +8,6 @@ function PizzaDelivery(name,size,topping,quantity) {
 }
 
 PizzaDelivery.prototype.EnumeratePizzaCost = function() {
-  if(this.pizzaSize === 'small')
-  {
-    this.pizzaCost += 4
-  }
-  else if(this.pizzaSize === 'medium')
-  {
-    this.pizzaCost += 5
-  }
-  else if(this.pizzaSize === 'large')
-  {
-    this.pizzaCost += 6
-  }
   if(this.pizzaName === '1')
   {
     this.pizzaCost += 1
@@ -39,6 +27,18 @@ PizzaDelivery.prototype.EnumeratePizzaCost = function() {
   else if(this.pizzaName === "5")
   {
     this.pizzaCost += 1
+  }
+  if(this.pizzaSize === 'small')
+  {
+    this.pizzaCost += 4
+  }
+  else if(this.pizzaSize === 'medium')
+  {
+    this.pizzaCost += 5
+  }
+  else if(this.pizzaSize === 'large')
+  {
+    this.pizzaCost += 6
   }
   for(var i=0;i<this.pizzaTopping.length;i++)
   {
@@ -88,7 +88,12 @@ PizzaDelivery.prototype.EnumeratePizzaCost = function() {
 
 //User Interface Logic
 $(document).ready(function() {
+  $(".bxslider").bxSlider({
+    auto: true,
+    autoControls: true
+    });
   $("#pizzaForm").submit(function(event) {
+
   var pizzaToppingArray=[];
   var pizzaGetName = $("input:radio[name=flavor]:checked").val();
   $("input:checkbox[name=topping]:checked").each(function(){
@@ -96,12 +101,12 @@ $(document).ready(function() {
   });
   var getPizzaSize = $("input:radio[name=size]:checked").val();
   var quantity = parseInt($("input#new-pizza-quantity").val());
-
+alert("working!");
  var newPizzaOrder = new PizzaDelivery(pizzaGetName,getPizzaSize,pizzaToppingArray,quantity);
  var pizzaCost = newPizzaOrder.EnumeratePizzaCost();
 
  //$(".total-cost").text(pizzaCost);
- $(".total-cost").append("Total Cost: " + "$" + ticketTotal +"<br>");
+ $(".total-cost").append("Total Cost: " + "$" + pizzaCost +"<br>");
 
 
 // if((name === "1")  && (this.pizzaSize === "small")) {
@@ -120,4 +125,5 @@ $(document).ready(function() {
 //         $("#results").append("Total Cost: " + "$" + totalCost +"<br>");
 
 });
+//prevent.eventDefault();
 });
