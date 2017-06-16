@@ -1,41 +1,47 @@
-# HTML Dev Template
-A simple, web development file structure, to speed web development.  This template is a good starting point for a web site requiring Bootstrap, jQuery and Google fonts. Originally coded on 6/6/2017.  By Steve Zaske.
+# _Pizza Order_
 
-## Install Instructions
-1. git clone the repository, to your local drive
-2. rename the folder
-3. delete the .git (hidden) folder
-4. git init
+#### _Independent project four, 06/16/2017_
+
+#### By _**Sowmya Logaswamy**_
+
+## Description
+
+_This is an online web page for a pizza shop We can order from anywhere anytime:_
+* _Display the total cost of pizza ordered_
+* _Give confirmation after ordering_
 
 
-## What's included
-Within the repository you'll find the following directories and files:
+## Setup/Installation Requirements
 
-```
-html-dev-template/
-├── css/
-│    ├── styles.css
-│    └── bootstrap.css
-├── js/
-│    ├── jquery-3.2.1.js
-│    └── script.js
-├── index.html
-└── README.md
-```
+* _Clone this repository_
+* _Open the repository and double click on index.html file_
 
-Direct questions and comments to: [github@zaske.com](mailto:github@zaske.com)
+## Known Bugs
+
+_Nil_
+
+## Specifications
+
+* _Create a HTML layout for a pizza online ordering_
+
+* _List out the items available in the shop with radio buttons and check boxes_
+
+* _Create business logic to define all the elements_
+
+* _Create all the functions to display the total cost and confirmation_
+
+* _Call the functions to make it display_
 
 ## Technologies Used
-* JavaScript
-* jQuery
-* Bootstrap
-* Google Fonts
+
+_HTML, CSS, Bootstrap, JavaScript and jQuery_
+
+## GitHub page links
+
+https://github.com/SowmyaLogaswamy/Order_Pizza
 
 ### License
-Copyright 2017 Steve Zaske
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Copyright (c) 2017 **_Sowmya Devi Logaswamy_**
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*This software is licensed under the MIT licence*
