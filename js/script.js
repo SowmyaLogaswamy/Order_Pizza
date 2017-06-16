@@ -1,43 +1,123 @@
 //Business Logic
-function Pizza(name, toppings,size,cost) {
+function PizzaDelivery(name,size,topping,quantity) {
   this.pizzaName = name;
-  this.toppings = toppings;
+  this.pizzaTopping = topping;
   this.pizzaSize = size;
-  this.cost = cost;
-}
-function Order(name, address) {
-  this.customerName = name;
-  this.address = address;
+  this.orderquantity = quantity;
+  this.pizzaCost = 0;
 }
 
-Pizza.prototype.pizzaRate = function (){
-  if(name === "1" && size==="small") {
-        cost = (name*size);
-      }
-      else if(name === "2" && size==="medium") {
-        chosenPizzaRate*mediumSizeCost;
-      }
-      else if(name === "3" && size==="large") {
-        chosenPizzaRate*largeSizeCost;
-      }
-
+PizzaDelivery.prototype.EnumeratePizzaCost = function() {
+  if(this.pizzaSize === 'small')
+  {
+    this.pizzaCost += 4
+  }
+  else if(this.pizzaSize === 'medium')
+  {
+    this.pizzaCost += 5
+  }
+  else if(this.pizzaSize === 'large')
+  {
+    this.pizzaCost += 6
+  }
+  if(this.pizzaName === '1')
+  {
+    this.pizzaCost += 1
+  }
+  else if(this.pizzaName === '2')
+  {
+    this.pizzaCost += 2
+  }
+  else if(this.pizzaName === '3')
+  {
+    this.pizzaCost += 3
+  }
+  else if(this.pizzaName === "4")
+  {
+    this.pizzaCost += 2
+  }
+  else if(this.pizzaName === "5")
+  {
+    this.pizzaCost += 1
+  }
+  for(var i=0;i<this.pizzaTopping.length;i++)
+  {
+    if(this.pizzaTopping[i] === "1")
+    {
+      this.pizzaCost += 2.5
+    }
+    else if(this.pizzaTopping[i] === "2")
+    {
+      this.pizzaCost += 2
+    }
+    else if(this.pizzaTopping[i] === "3")
+    {
+      this.pizzaCost += 1
+    }
+    else if(this.pizzaTopping[i] === "4")
+    {
+      this.pizzaCost += 2.5
+    }
+    else if(this.pizzaTopping[i] === "5")
+    {
+      this.pizzaCost += 1.1
+    }
+    else if(this.pizzaTopping[i] === "6")
+    {
+      this.pizzaCost += 2.2
+    }
+    else if(this.pizzaTopping[i] === "7")
+    {
+      this.pizzaCost += 2.3
+    }
+    else if(this.pizzaTopping[i] === "8")
+    {
+      this.pizzaCost += 3
+    }
+    else if(this.pizzaTopping[i] === "9")
+    {
+      this.pizzaCost += 1
+    }
+    else if(this.pizzaTopping[i] === "10")
+    {
+      this.pizzaCost += 2
+    }
+  }
+  return this.pizzaCost.toFixed(2);
 }
 
 //User Interface Logic
 $(document).ready(function() {
-  $("form#pizzaForm").submit(function(event) {
-  event.preventDefault();
-  var pizzaToppingsArray=[];
-  var pizzaName = $("input:radio[name=flavor]:checked").val();
-  //var toppings = $("#toppings").val();
+  $("#pizzaForm").submit(function(event) {
+  var pizzaToppingArray=[];
+  var pizzaGetName = $("input:radio[name=flavor]:checked").val();
   $("input:checkbox[name=topping]:checked").each(function(){
-      pizzaToppingsArray.push($(this).val());
+      pizzaToppingArray.push($(this).val());
   });
-  var pizzaSize = $("input:radio[name=size]:checked").val();
-console.log("test");
-var smallsizeCost;
-var newPizzaOrder = new Pizza(pizzaSize, pizzaName, pizzaToppingsArray);
-    var pizzaCost = newPizzaOrder.pizzaRate();
-    console.log("test1");
+  var getPizzaSize = $("input:radio[name=size]:checked").val();
+  var quantity = parseInt($("input#new-pizza-quantity").val());
+
+ var newPizzaOrder = new PizzaDelivery(pizzaGetName,getPizzaSize,pizzaToppingArray,quantity);
+ var pizzaCost = newPizzaOrder.EnumeratePizzaCost();
+
+ //$(".total-cost").text(pizzaCost);
+ $(".total-cost").append("Total Cost: " + "$" + ticketTotal +"<br>");
+
+
+// if((name === "1")  && (this.pizzaSize === "small")) {
+//       pizzacost =5;
+//     }
+//     else if(name === "2" && size === "medium") {
+//       pizzacost = 7;
+//     }
+//     else if(name === "3" && size === "large") {
+//       pizzacost = 10;
+//     }
+//     var totalCost = quantity * pizzacost;
+// // var newPizzaOrder = new Pizza(pizzaName,pizzaSize,pizzaToppingsArray,pizzaQuantity);
+// //     var pizzaCost = newPizzaOrder.pizzaRate();
+//         $("#results").append("Pizza Name: " + pizzaName +"<br>");
+//         $("#results").append("Total Cost: " + "$" + totalCost +"<br>");
+
 });
 });
