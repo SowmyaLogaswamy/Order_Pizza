@@ -102,8 +102,11 @@ $(document).ready(function() {
     var quantity = parseInt($("input#new-pizza-quantity").val());
     var newPizzaOrder = new PizzaDelivery(pizzaGetName,getPizzaSize,pizzaToppingArray,quantity);
     var pizzaCost = newPizzaOrder.EnumeratePizzaCost();
-    //$(".total-cost").text(pizzaCost);
-    $(".total-cost").append("Total Cost: " + "$" + pizzaCost +"<br>");
+    $(".total-cost").text(pizzaCost);
+    //$(".total-cost").text("Total Cost: " + "$" + pizzaCost +"<br>");
+    event.preventDefault();
   });
-  prevent.eventDefault();
+  $("#place-order").click(function() {
+      alert("Thank you for placing the order. Order number : " + Math.ceil(Math.random() * 100));
+  });
 });
