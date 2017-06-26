@@ -21,16 +21,14 @@ _This is an online web page for a pizza shop We can order from anywhere anytime:
 _Nil_
 
 ## Specifications
-
-* _Create a HTML layout for a pizza online ordering_
-
-* _List out the items available in the shop with radio buttons and check boxes_
-
-* _Create business logic to define all the elements_
-
-* _Create all the functions to display the total cost and confirmation_
-
-* _Call the functions to make it display_
+| Description | Input | Output |
+|-------------|-------|--------|
+| Calculate cost for small pizza | Small($4) | $4 |
+| Calculate cost for pizza based on all size | Large($6) | $6.00 |
+| Calculate cost for Pizza size and one topping | Small($4), cheese($2.50) | $6.50|
+| Calculate cost for Pizza size and multiple topping | Small($4), cheese($2.50), meat($1) | $7.50|
+| Calculate cost for Pizza size, multiple topping and sauce  | Small($4), cheese($2.5), meat($1), Shrimp($2) | $9.50|
+| Calculate cost for Pizza size, multiple topping ,sauce and dough | Small($4), cheese($2.5), Meat($1), Shrimp($2), Original($2) | $11.50|
 
 ## Technologies Used
 
