@@ -23,12 +23,12 @@ _Nil_
 ## Specifications
 | Description | Input | Output |
 |-------------|-------|--------|
-| Calculate cost for small pizza | Small($4) | $4 |
-| Calculate cost for pizza based on all size | Large($6) | $6.00 |
-| Calculate cost for Pizza size and one topping | Small($4), cheese($2.50) | $6.50|
-| Calculate cost for Pizza size and multiple topping | Small($4), cheese($2.50), meat($1) | $7.50|
-| Calculate cost for Pizza size, multiple topping and sauce  | Small($4), cheese($2.5), meat($1), Shrimp($2) | $9.50|
-| Calculate cost for Pizza size, multiple topping ,sauce and dough | Small($4), cheese($2.5), Meat($1), Shrimp($2), Original($2) | $11.50|
+| Calculate cost for small pizza and a variety Dominic($1) | Small($4) | $5.00 |
+| Calculate cost for pizza based on all size | Large($6) and variety Tristan($2) | $8.00 |
+| Calculate cost for Pizza size, Pizza variety and one topping | Small($4), Jasper($3) cheese($2.50) | $6.50|
+| Calculate cost for Pizza size, Pizza variety and multiple topping | Small($4), Jasper ($3), cheese($2.50), meat($1) | $10.50|
+| Calculate cost for Pizza size, Pizza variety, multiple topping and sauce  | Small($4), Jasper($3), cheese($2.5), meat($1), Shrimp($2) | $10.50|
+| Calculate cost for Pizza size, Pizza variety, multiple topping ,sauce and dough | Small($4), Jasper($3), cheese($2.5), Meat($1), Shrimp($2), Original($2) | $14.50|
 
 ## Technologies Used
 
